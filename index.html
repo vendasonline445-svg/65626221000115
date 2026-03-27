@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro Médico Ricamar em Vitória. Consultas especializadas e regulação de urgência hospitalar.">
+    <title>Centro Médico Ricamar | Saúde e Urgência</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --med-blue: #004A8D; --med-teal: #00A3AD; }
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, .navbar-brand { font-family: 'Montserrat', sans-serif; }
+        .navbar { border-bottom: 4px solid var(--med-blue); padding: 20px 0; }
+        .navbar-brand { color: var(--med-blue) !important; font-weight: 700; }
+        .hero { background: linear-gradient(rgba(0,74,141,0.8), rgba(0,74,141,0.6)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80') center/cover; padding: 120px 0; color: white; }
+        .card-med { border: none; border-radius: 15px; background: #f4f9ff; padding: 30px; transition: 0.3s; border-top: 5px solid var(--med-teal); }
+        .card-med:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .map-frame { height: 400px; border-radius: 15px; overflow: hidden; border: 1px solid #ddd; }
+        footer { background: #1a202c; color: #a0aec0; padding: 60px 0 20px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">RICAMAR <span>MEDICINA</span></a>
+        <a href="#agendamento" class="btn btn-primary rounded-pill px-4 fw-bold">AGENDAR CONSULTA</a>
+    </div>
+</nav>
+
+<section class="hero text-center text-lg-start">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Referência em Saúde no Centro de Vitória.</h1>
+                <p class="lead mb-4">Gestão médica ambulatorial e suporte hospitalar de urgência com tecnologia e humanização.</p>
+                <a href="#servicos" class="btn btn-light btn-lg text-primary fw-bold">NOSSOS SERVIÇOS</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="servicos" class="py-5">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="card-med">
+                    <i class="fas fa-stethoscope fa-3x text-primary mb-3"></i>
+                    <h4>Consultas</h4>
+                    <p class="small">Atendimento ambulatorial especializado. (CNAE 86.30-5-03)</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="card-med">
+                    <i class="fas fa-ambulance fa-3x text-primary mb-3"></i>
+                    <h4>Urgência 24h</h4>
+                    <p class="small">Gestão de pronto-socorro e pronto atendimento. (CNAE 86.10-1-02)</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="card-med">
+                    <i class="fas fa-hospital fa-3x text-primary mb-3"></i>
+                    <h4>Hospitalar</h4>
+                    <p class="small">Procedimentos cirúrgicos e suporte hospitalar completo. (CNAE 86.10-1-01)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="agendamento" class="py-5 bg-light">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <h2 class="fw-bold mb-4 text-primary">Unidade Ricamar</h2>
+                <p><strong>Endereço:</strong> Rua Alberto de Oliveira Santos, 59<br>Edif Ricamar Sala 1115 - Centro, Vitória/ES</p>
+                <form onsubmit="event.preventDefault(); alert('Recebido!'); this.reset();">
+                    <input type="text" class="form-control mb-3" placeholder="Nome Completo" required>
+                    <input type="tel" class="form-control mb-3" placeholder="WhatsApp" required>
+                    <button class="btn btn-primary w-100 py-3 fw-bold">SOLICITAR AGENDAMENTO</button>
+                </form>
+            </div>
+            <div class="col-lg-7">
+                <div class="map-frame">
+                    <iframe width="100%" height="100%" frameborder="0" style="border:0" 
+                    src="https://maps.google.com/maps?q=Rua%20Alberto%20de%20Oliveira%20Santos,%2059%20-%20Centro,%20Vitória%20-%20ES&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <p><strong>Unidade Ricamar</strong> | CNPJ: 65.626.221/0001-15</p>
+        <p class="small">Responsabilidade Técnica Médica em Vitória/ES</p>
+        <a href="politicas.html" class="text-secondary small">Privacidade e Termos (LGPD)</a>
+    </div>
+</footer>
+
+</body>
+</html>
